@@ -1,1 +1,360 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Profit Margin Calculator | SoloBizKit</title><meta name="description" content="Calculate gross profit margin from revenue and costs. Free online calculator from SoloBizKit."><link rel="canonical" href="https://YOUR-DOMAIN.example/tools/profit-margin.html"><link rel="stylesheet" href="../assets/styles.css"></head><body><header class="site-header"><a class="brand" href="../index.html"><span class="brand-mark">S</span><span>SoloBizKit</span></a><button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button><nav id="mainNav"><a href="../index.html#tools">Tools</a><a href="../guides/index.html">Guides</a><a href="../about.html">About</a></nav></header><main class="page-wrap"><div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#tools">Tools</a> / Profit Margin Calculator</div><span class="eyebrow">FREE BUSINESS CALCULATOR</span><h1>Profit Margin Calculator</h1><p>Calculate gross profit margin from revenue and costs.</p><div class="calculator"><div class="form-grid"><div class="field"><label for="a">Revenue</label><input id="a" type="number" min="0" step="any" value="10000"></div><div class="field"><label for="b">Cost of goods sold</label><input id="b" type="number" min="0" step="any" value="6000"></div><div class="field"><label for="currency">Currency</label><select id="currency"><option>USD</option><option>CAD</option><option>GBP</option><option>AUD</option><option>EUR</option></select></div></div><button class="button primary calc-button" onclick="calculate('margin')">Calculate</button><div class="result" id="result" aria-live="polite"></div></div><div class="notice"><b>Note:</b> This calculator provides an estimate for general planning. Tax, lending and accounting rules vary by location. Check important decisions with a qualified professional.</div><div class="site-footer-mini"><a href="../index.html">← Back to SoloBizKit</a></div></main><script src="../assets/main.js"></script><script src="../assets/calculators.js"></script></body></html>
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Profit Margin Calculator | SoloBizKit</title>
+
+  <meta name="description" content="Calculate gross profit, gross profit margin and markup with this free online business calculator from SoloBizKit.">
+
+  <meta name="robots" content="index,follow">
+
+  <link rel="canonical" href="https://solobizkit.pages.dev/tools/profit-margin.html">
+
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <a class="brand" href="../index.html">
+    <span class="brand-mark">S</span>
+    <span>SoloBizKit</span>
+  </a>
+
+  <button
+    class="menu-toggle"
+    id="menuToggle"
+    type="button"
+    aria-label="Toggle navigation"
+    aria-expanded="false"
+  >☰</button>
+
+  <nav id="mainNav" aria-label="Main navigation">
+    <a href="../index.html#tools">Tools</a>
+    <a href="../guides/index.html">Guides</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="page-wrap">
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> /
+    <a href="../index.html#tools">Tools</a> /
+    Profit Margin Calculator
+  </div>
+
+  <span class="eyebrow">FREE BUSINESS CALCULATOR</span>
+
+  <h1>Profit Margin Calculator</h1>
+
+  <p>
+    Calculate your gross profit, gross profit margin and markup
+    from your business revenue and cost of goods sold.
+  </p>
+
+  <section class="calculator" aria-label="Profit margin calculator">
+
+    <div class="form-grid">
+
+      <div class="field">
+        <label for="revenue">Revenue</label>
+        <input
+          id="revenue"
+          type="number"
+          min="0"
+          step="any"
+          value="10000"
+          inputmode="decimal"
+        >
+      </div>
+
+      <div class="field">
+        <label for="cost">Cost of goods sold (COGS)</label>
+        <input
+          id="cost"
+          type="number"
+          min="0"
+          step="any"
+          value="6000"
+          inputmode="decimal"
+        >
+      </div>
+
+      <div class="field">
+        <label for="currency">Currency</label>
+        <select id="currency">
+          <option value="USD">USD - US Dollar</option>
+          <option value="CAD">CAD - Canadian Dollar</option>
+          <option value="GBP">GBP - British Pound</option>
+          <option value="AUD">AUD - Australian Dollar</option>
+          <option value="EUR">EUR - Euro</option>
+        </select>
+      </div>
+
+    </div>
+
+    <button
+      class="button primary calc-button"
+      id="calculateButton"
+      type="button"
+    >
+      Calculate
+    </button>
+
+    <div
+      class="result"
+      id="result"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+
+  </section>
+
+  <section class="article">
+
+    <h2>What Is Gross Profit Margin?</h2>
+
+    <p>
+      Gross profit margin measures how much money your business
+      keeps from revenue after paying the direct costs of producing
+      or purchasing the goods or services sold.
+    </p>
+
+    <p>
+      A higher gross profit margin generally means more revenue
+      remains after covering direct costs. This amount can then
+      contribute toward operating expenses and profit.
+    </p>
+
+    <h2>How to Calculate Gross Profit Margin</h2>
+
+    <p>
+      <strong>Gross Profit = Revenue − Cost of Goods Sold</strong>
+    </p>
+
+    <p>
+      <strong>
+        Gross Profit Margin = (Gross Profit ÷ Revenue) × 100
+      </strong>
+    </p>
+
+    <h2>Example Calculation</h2>
+
+    <p>Suppose your business has these figures:</p>
+
+    <ul>
+      <li>Revenue: $10,000</li>
+      <li>Cost of goods sold: $6,000</li>
+      <li>Gross profit: $4,000</li>
+    </ul>
+
+    <p>
+      Divide the $4,000 gross profit by $10,000 revenue
+      and multiply by 100.
+    </p>
+
+    <p>
+      Your gross profit margin is 40%.
+    </p>
+
+    <h2>Gross Profit Margin vs. Markup</h2>
+
+    <p>
+      Gross profit margin and markup are related but different.
+      Gross profit margin compares profit with revenue, while
+      markup compares profit with the cost of goods sold.
+    </p>
+
+    <p>
+      For example, a $4,000 gross profit on $6,000 in costs
+      represents a markup of approximately 66.67%, while the
+      gross profit margin is 40%.
+    </p>
+
+    <h2>Important Considerations</h2>
+
+    <p>
+      This calculator uses revenue and cost of goods sold.
+      It does not automatically include operating expenses,
+      interest, income taxes or other indirect costs.
+    </p>
+
+    <p>
+      Make sure your revenue and costs relate to the same
+      accounting period and use consistent accounting figures.
+    </p>
+
+  </section>
+
+  <div class="notice">
+    <strong>Note:</strong>
+    This calculator provides estimates for general business
+    planning and educational purposes only. Results depend on
+    the information entered and may not include every cost,
+    tax or business circumstance. Verify important decisions
+    with appropriate official sources or qualified professionals.
+  </div>
+
+  <div class="site-footer-mini">
+    <a href="../index.html">← Back to SoloBizKit</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../privacy.html">Privacy Policy</a>
+    <a href="../terms.html">Terms</a>
+  </div>
+
+</main>
+
+<script src="../assets/main.js"></script>
+
+<script>
+(function () {
+
+  const revenueInput = document.getElementById("revenue");
+  const costInput = document.getElementById("cost");
+  const currencyInput = document.getElementById("currency");
+  const result = document.getElementById("result");
+  const button = document.getElementById("calculateButton");
+
+  function showError(message) {
+    result.textContent = message;
+    result.setAttribute("role", "alert");
+  }
+
+  function formatMoney(value, currency) {
+    return new Intl.NumberFormat("en", {
+      style: "currency",
+      currency: currency,
+      maximumFractionDigits: 2
+    }).format(value);
+  }
+
+  function formatPercent(value) {
+    return new Intl.NumberFormat("en", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    }).format(value) + "%";
+  }
+
+  function addResultLine(label, value) {
+    const paragraph = document.createElement("p");
+    paragraph.textContent = label + ": " + value;
+    result.appendChild(paragraph);
+  }
+
+  function calculate() {
+
+    const revenueText = revenueInput.value.trim();
+    const costText = costInput.value.trim();
+
+    if (!revenueText || !costText) {
+      showError("Please enter both revenue and cost of goods sold.");
+      return;
+    }
+
+    const revenue = Number(revenueText);
+    const cost = Number(costText);
+    const currency = currencyInput.value;
+
+    if (
+      !Number.isFinite(revenue) ||
+      !Number.isFinite(cost)
+    ) {
+      showError("Please enter valid numbers.");
+      return;
+    }
+
+    if (revenue < 0 || cost < 0) {
+      showError("Revenue and costs cannot be negative.");
+      return;
+    }
+
+    if (revenue === 0) {
+      showError("Revenue must be greater than zero to calculate profit margin.");
+      return;
+    }
+
+    const grossProfit = revenue - cost;
+    const grossMargin = (grossProfit / revenue) * 100;
+
+    const markup = cost > 0
+      ? (grossProfit / cost) * 100
+      : null;
+
+    result.replaceChildren();
+
+    const heading = document.createElement("h2");
+    heading.textContent = "Your Profit Margin Results";
+    result.appendChild(heading);
+
+    addResultLine(
+      "Revenue",
+      formatMoney(revenue, currency)
+    );
+
+    addResultLine(
+      "Cost of goods sold",
+      formatMoney(cost, currency)
+    );
+
+    addResultLine(
+      "Gross profit",
+      formatMoney(grossProfit, currency)
+    );
+
+    addResultLine(
+      "Gross profit margin",
+      formatPercent(grossMargin)
+    );
+
+    addResultLine(
+      "Markup",
+      markup === null
+        ? "Not applicable when cost of goods sold is zero"
+        : formatPercent(markup)
+    );
+
+    const explanation = document.createElement("p");
+
+    if (grossProfit > 0) {
+      explanation.textContent =
+        "Your business has a positive gross profit before operating expenses and other indirect costs.";
+    } else if (grossProfit === 0) {
+      explanation.textContent =
+        "Your revenue exactly covers your cost of goods sold. There is no gross profit before other expenses.";
+    } else {
+      explanation.textContent =
+        "Your cost of goods sold is higher than revenue, resulting in a gross loss.";
+    }
+
+    result.appendChild(explanation);
+    result.removeAttribute("role");
+  }
+
+  button.addEventListener("click", calculate);
+
+  [revenueInput, costInput, currencyInput].forEach(function (input) {
+    input.addEventListener("input", function () {
+      result.replaceChildren();
+      result.removeAttribute("role");
+    });
+
+    input.addEventListener("change", function () {
+      result.replaceChildren();
+      result.removeAttribute("role");
+    });
+  });
+
+  calculate();
+
+})();
+</script>
+
+</body>
+</html>
+```
