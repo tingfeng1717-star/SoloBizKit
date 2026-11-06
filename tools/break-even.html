@@ -1,1 +1,286 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Break-Even Calculator | SoloBizKit</title><meta name="description" content="Estimate how many units you need to sell to cover fixed costs. Free online calculator from SoloBizKit."><link rel="canonical" href="https://YOUR-DOMAIN.example/tools/break-even.html"><link rel="stylesheet" href="../assets/styles.css"></head><body><header class="site-header"><a class="brand" href="../index.html"><span class="brand-mark">S</span><span>SoloBizKit</span></a><button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button><nav id="mainNav"><a href="../index.html#tools">Tools</a><a href="../guides/index.html">Guides</a><a href="../about.html">About</a></nav></header><main class="page-wrap"><div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#tools">Tools</a> / Break-Even Calculator</div><span class="eyebrow">FREE BUSINESS CALCULATOR</span><h1>Break-Even Calculator</h1><p>Estimate how many units you need to sell to cover fixed costs.</p><div class="calculator"><div class="form-grid"><div class="field"><label for="a">Selling price per unit</label><input id="a" type="number" min="0" step="any" value="50"></div><div class="field"><label for="b">Variable cost per unit</label><input id="b" type="number" min="0" step="any" value="20"></div><div class="field"><label for="c">Fixed costs</label><input id="c" type="number" min="0" step="any" value="3000"></div><div class="field"><label for="currency">Currency</label><select id="currency"><option>USD</option><option>CAD</option><option>GBP</option><option>AUD</option><option>EUR</option></select></div></div><button class="button primary calc-button" onclick="calculate('break')">Calculate</button><div class="result" id="result" aria-live="polite"></div></div><div class="notice"><b>Note:</b> This calculator provides an estimate for general planning. Tax, lending and accounting rules vary by location. Check important decisions with a qualified professional.</div><div class="site-footer-mini"><a href="../index.html">← Back to SoloBizKit</a></div></main><script src="../assets/main.js"></script><script src="../assets/calculators.js"></script></body></html>
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Break-Even Calculator | SoloBizKit</title>
+  <meta name="description" content="Calculate how many units your business needs to sell to cover fixed costs. Free break-even calculator with a clear step-by-step result.">
+  <meta name="robots" content="index,follow">
+
+  <link rel="canonical" href="https://solobizkit.pages.dev/tools/break-even.html">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">
+    <span class="brand-mark">S</span>
+    <span>SoloBizKit</span>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle"
+    type="button" aria-label="Toggle navigation"
+    aria-expanded="false">☰</button>
+
+  <nav id="mainNav" aria-label="Main navigation">
+    <a href="../index.html#tools">Tools</a>
+    <a href="../guides/index.html">Guides</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="page-wrap">
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> /
+    <a href="../index.html#tools">Tools</a> /
+    Break-Even Calculator
+  </div>
+
+  <span class="eyebrow">FREE BUSINESS CALCULATOR</span>
+
+  <h1>Break-Even Calculator</h1>
+
+  <p>
+    Find out how many units you need to sell to cover your fixed
+    costs and reach the break-even point.
+  </p>
+
+  <section class="calculator" aria-label="Break-even calculator">
+    <div class="form-grid">
+
+      <div class="field">
+        <label for="sellingPrice">Selling price per unit</label>
+        <input id="sellingPrice" type="number"
+          min="0" step="any" value="50" inputmode="decimal">
+      </div>
+
+      <div class="field">
+        <label for="variableCost">Variable cost per unit</label>
+        <input id="variableCost" type="number"
+          min="0" step="any" value="20" inputmode="decimal">
+      </div>
+
+      <div class="field">
+        <label for="fixedCosts">Total fixed costs</label>
+        <input id="fixedCosts" type="number"
+          min="0" step="any" value="3000" inputmode="decimal">
+      </div>
+
+      <div class="field">
+        <label for="currency">Currency</label>
+        <select id="currency">
+          <option value="USD">USD - US Dollar</option>
+          <option value="CAD">CAD - Canadian Dollar</option>
+          <option value="GBP">GBP - British Pound</option>
+          <option value="AUD">AUD - Australian Dollar</option>
+          <option value="EUR">EUR - Euro</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="button primary calc-button"
+      id="calculateButton" type="button">
+      Calculate
+    </button>
+
+    <div class="result" id="result"
+      aria-live="polite" aria-atomic="true"></div>
+  </section>
+
+  <section class="article">
+    <h2>How the Break-Even Point Is Calculated</h2>
+
+    <p>
+      The break-even point is the sales quantity at which total
+      revenue equals total costs. At this point, there is no
+      operating profit or loss under the assumptions used.
+    </p>
+
+    <p>
+      <strong>
+        Break-Even Units = Fixed Costs ÷
+        (Selling Price per Unit − Variable Cost per Unit)
+      </strong>
+    </p>
+
+    <h2>Example Calculation</h2>
+
+    <p>Imagine your business has these figures:</p>
+
+    <ul>
+      <li>Selling price per unit: $50</li>
+      <li>Variable cost per unit: $20</li>
+      <li>Fixed costs: $3,000</li>
+    </ul>
+
+    <p>
+      Each unit contributes $30 toward fixed costs.
+      Dividing $3,000 by $30 gives a break-even point of
+      100 units.
+    </p>
+
+    <h2>What to Check Before Using the Result</h2>
+
+    <p>
+      Fixed costs and variable costs should cover the same period.
+      For example, if your fixed costs are monthly, the result
+      represents the number of units to sell during that month.
+    </p>
+
+    <p>
+      This calculator assumes one product or service, a constant
+      selling price and a constant variable cost per unit.
+      It does not automatically include taxes, discounts,
+      changing prices or multiple products.
+    </p>
+  </section>
+
+  <div class="notice">
+    <strong>Note:</strong>
+    This calculator provides estimates for general business
+    planning and educational purposes only. Results depend on
+    the information entered and may not include every cost,
+    tax or business circumstance. Verify important decisions
+    with appropriate official sources or qualified professionals.
+  </div>
+
+  <div class="site-footer-mini">
+    <a href="../index.html">← Back to SoloBizKit</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../privacy.html">Privacy Policy</a>
+    <a href="../terms.html">Terms</a>
+  </div>
+</main>
+
+<script src="../assets/main.js"></script>
+
+<script>
+(function () {
+  const priceInput = document.getElementById("sellingPrice");
+  const variableInput = document.getElementById("variableCost");
+  const fixedInput = document.getElementById("fixedCosts");
+  const currencyInput = document.getElementById("currency");
+  const result = document.getElementById("result");
+  const button = document.getElementById("calculateButton");
+
+  function showError(message) {
+    result.textContent = message;
+    result.setAttribute("role", "alert");
+  }
+
+  function money(value, currency) {
+    return new Intl.NumberFormat("en", {
+      style: "currency",
+      currency: currency,
+      maximumFractionDigits: 2
+    }).format(value);
+  }
+
+  function calculate() {
+    const priceText = priceInput.value.trim();
+    const variableText = variableInput.value.trim();
+    const fixedText = fixedInput.value.trim();
+
+    if (!priceText || !variableText || !fixedText) {
+      showError("Please complete all three number fields.");
+      return;
+    }
+
+    const price = Number(priceText);
+    const variableCost = Number(variableText);
+    const fixedCosts = Number(fixedText);
+    const currency = currencyInput.value;
+
+    if (
+      !Number.isFinite(price) ||
+      !Number.isFinite(variableCost) ||
+      !Number.isFinite(fixedCosts)
+    ) {
+      showError("Please enter valid numbers.");
+      return;
+    }
+
+    if (price < 0 || variableCost < 0 || fixedCosts < 0) {
+      showError("Values cannot be negative.");
+      return;
+    }
+
+    if (price <= variableCost) {
+      showError(
+        "Selling price must be greater than variable cost per unit. Otherwise, sales cannot cover fixed costs."
+      );
+      return;
+    }
+
+    const contribution = price - variableCost;
+    const exactUnits = fixedCosts / contribution;
+    const units = Math.ceil(exactUnits);
+    const revenue = units * price;
+    const totalVariableCosts = units * variableCost;
+    const totalCosts = fixedCosts + totalVariableCosts;
+    const surplus = revenue - totalCosts;
+
+    result.replaceChildren();
+
+    const heading = document.createElement("h2");
+    heading.textContent = "Your Break-Even Result";
+
+    const mainResult = document.createElement("p");
+    mainResult.textContent =
+      "Minimum units to sell: " + units.toLocaleString("en");
+
+    const margin = document.createElement("p");
+    margin.textContent =
+      "Contribution margin per unit: " +
+      money(contribution, currency);
+
+    const sales = document.createElement("p");
+    sales.textContent =
+      "Sales revenue at this quantity: " +
+      money(revenue, currency);
+
+    const costs = document.createElement("p");
+    costs.textContent =
+      "Total estimated costs: " + money(totalCosts, currency);
+
+    const note = document.createElement("p");
+    note.textContent =
+      "You need to sell at least " +
+      units.toLocaleString("en") +
+      " units to cover your fixed and variable costs.";
+
+    result.append(
+      heading,
+      mainResult,
+      margin,
+      sales,
+      costs,
+      note
+    );
+
+    result.removeAttribute("role");
+  }
+
+  button.addEventListener("click", calculate);
+
+  [priceInput, variableInput, fixedInput, currencyInput]
+    .forEach(function (input) {
+      input.addEventListener("input", function () {
+        result.replaceChildren();
+      });
+      input.addEventListener("change", function () {
+        result.replaceChildren();
+      });
+    });
+
+  calculate();
+})();
+</script>
+
+</body>
+</html>
+```
