@@ -1,1 +1,234 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Markup Calculator | SoloBizKit</title><meta name="description" content="Calculate a selling price from unit cost and markup percentage. Free online calculator from SoloBizKit."><link rel="canonical" href="https://YOUR-DOMAIN.example/tools/markup.html"><link rel="stylesheet" href="../assets/styles.css"></head><body><header class="site-header"><a class="brand" href="../index.html"><span class="brand-mark">S</span><span>SoloBizKit</span></a><button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button><nav id="mainNav"><a href="../index.html#tools">Tools</a><a href="../guides/index.html">Guides</a><a href="../about.html">About</a></nav></header><main class="page-wrap"><div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#tools">Tools</a> / Markup Calculator</div><span class="eyebrow">FREE BUSINESS CALCULATOR</span><h1>Markup Calculator</h1><p>Calculate a selling price from unit cost and markup percentage.</p><div class="calculator"><div class="form-grid"><div class="field"><label for="a">Unit cost</label><input id="a" type="number" min="0" step="any" value="25"></div><div class="field"><label for="b">Markup percentage</label><input id="b" type="number" min="0" step="any" value="40"></div><div class="field"><label for="currency">Currency</label><select id="currency"><option>USD</option><option>CAD</option><option>GBP</option><option>AUD</option><option>EUR</option></select></div></div><button class="button primary calc-button" onclick="calculate('markup')">Calculate</button><div class="result" id="result" aria-live="polite"></div></div><div class="notice"><b>Note:</b> This calculator provides an estimate for general planning. Tax, lending and accounting rules vary by location. Check important decisions with a qualified professional.</div><div class="site-footer-mini"><a href="../index.html">← Back to SoloBizKit</a></div></main><script src="../assets/main.js"></script><script src="../assets/calculators.js"></script></body></html>
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Markup Calculator | Calculate Selling Price - SoloBizKit</title>
+  <meta name="description" content="Use this free markup calculator to calculate selling prices, markup amounts and gross profit margins from your product costs.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://solobizkit.pages.dev/tools/markup.html">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">
+    <span class="brand-mark">S</span>
+    <span>SoloBizKit</span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+  <nav id="mainNav">
+    <a href="../index.html#tools">Tools</a>
+    <a href="../guides/index.html">Guides</a>
+    <a href="../about.html">About</a>
+  </nav>
+</header>
+
+<main class="page-wrap">
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> /
+    <a href="../index.html#tools">Tools</a> /
+    Markup Calculator
+  </div>
+
+  <span class="eyebrow">FREE BUSINESS CALCULATOR</span>
+  <h1>Markup Calculator</h1>
+
+  <p>
+    Calculate a product's selling price using its unit cost and markup
+    percentage. See your markup amount and estimated gross profit margin
+    before setting a price.
+  </p>
+
+  <section class="calculator" aria-label="Markup calculator">
+    <div class="form-grid">
+      <div class="field">
+        <label for="cost">Unit cost</label>
+        <input id="cost" type="number" min="0" step="any" value="25">
+      </div>
+
+      <div class="field">
+        <label for="markup">Markup percentage (%)</label>
+        <input id="markup" type="number" min="0" step="any" value="40">
+      </div>
+
+      <div class="field">
+        <label for="currency">Currency</label>
+        <select id="currency">
+          <option value="USD">USD</option>
+          <option value="CAD">CAD</option>
+          <option value="GBP">GBP</option>
+          <option value="AUD">AUD</option>
+          <option value="EUR">EUR</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="button primary calc-button" id="calculateButton" type="button">
+      Calculate
+    </button>
+
+    <div class="result" id="result" aria-live="polite"></div>
+  </section>
+
+  <section class="article">
+    <h2>What Is Markup?</h2>
+    <p>
+      Markup is the amount added to the cost of a product to determine
+      its selling price. Businesses use markup to help set prices and
+      plan for operating expenses and profit.
+    </p>
+
+    <h2>Markup Formula</h2>
+    <p>
+      The markup percentage is applied to the original unit cost.
+    </p>
+    <p><strong>Markup Amount = Unit Cost × Markup Percentage ÷ 100</strong></p>
+    <p><strong>Selling Price = Unit Cost + Markup Amount</strong></p>
+
+    <h2>Markup Calculator Example</h2>
+    <p>
+      Suppose a product costs $25 and you apply a 40% markup.
+    </p>
+    <ul>
+      <li>Unit cost: $25</li>
+      <li>Markup percentage: 40%</li>
+      <li>Markup amount: $10</li>
+      <li>Selling price: $35</li>
+      <li>Gross profit margin: 28.57%</li>
+    </ul>
+
+    <h2>Markup vs. Profit Margin</h2>
+    <p>
+      Markup and profit margin are related but different measurements.
+      Markup compares profit with the original cost, while profit margin
+      compares profit with the selling price.
+    </p>
+    <p>
+      A 40% markup does not mean a 40% profit margin. For example,
+      a product costing $25 and selling for $35 has a 40% markup
+      but a gross profit margin of approximately 28.57%.
+    </p>
+
+    <h2>What to Consider When Setting Prices</h2>
+    <ul>
+      <li>Include all relevant product and purchasing costs.</li>
+      <li>Consider shipping, packaging and transaction fees.</li>
+      <li>Compare prices with similar products in your market.</li>
+      <li>Review customer demand and your business expenses.</li>
+      <li>Remember that taxes and operating expenses may reduce net profit.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>How do I calculate a 40% markup?</h3>
+    <p>
+      Multiply the unit cost by 0.40 to find the markup amount,
+      then add that amount to the original cost.
+    </p>
+
+    <h3>Is markup the same as profit margin?</h3>
+    <p>
+      No. Markup is based on cost, while profit margin is based
+      on the selling price.
+    </p>
+
+    <h3>Can I use this calculator for different currencies?</h3>
+    <p>
+      Yes. Select USD, CAD, GBP, AUD or EUR. The calculator uses
+      your selected currency to display the results.
+    </p>
+  </section>
+
+  <div class="notice">
+    <b>Note:</b> This calculator provides estimates for general business
+    planning. It does not include taxes, operating expenses or other
+    additional costs unless you include them in the unit cost.
+    Check important pricing decisions with a qualified professional.
+  </div>
+
+  <div class="site-footer-mini">
+    <a href="../index.html">← Back to SoloBizKit</a>
+  </div>
+</main>
+
+<script src="../assets/main.js"></script>
+<script>
+(function () {
+  const costInput = document.getElementById("cost");
+  const markupInput = document.getElementById("markup");
+  const currencyInput = document.getElementById("currency");
+  const result = document.getElementById("result");
+  const button = document.getElementById("calculateButton");
+
+  function calculate() {
+    const cost = Number(costInput.value);
+    const markup = Number(markupInput.value);
+    const currency = currencyInput.value;
+
+    result.replaceChildren();
+
+    if (
+      costInput.value.trim() === "" ||
+      markupInput.value.trim() === "" ||
+      !Number.isFinite(cost) ||
+      !Number.isFinite(markup) ||
+      cost < 0 ||
+      markup < 0
+    ) {
+      result.textContent =
+        "Please enter valid numbers. Unit cost and markup percentage must be zero or greater.";
+      return;
+    }
+
+    const markupAmount = cost * markup / 100;
+    const sellingPrice = cost + markupAmount;
+    const grossProfitMargin =
+      sellingPrice > 0 ? markupAmount / sellingPrice * 100 : 0;
+
+    const formatter = new Intl.NumberFormat("en", {
+      style: "currency",
+      currency: currency
+    });
+
+    const heading = document.createElement("h2");
+    heading.textContent = "Your Results";
+
+    const list = document.createElement("ul");
+
+    const values = [
+      ["Unit cost", formatter.format(cost)],
+      ["Markup amount", formatter.format(markupAmount)],
+      ["Selling price", formatter.format(sellingPrice)],
+      ["Markup percentage", markup.toFixed(2) + "%"],
+      ["Gross profit margin", grossProfitMargin.toFixed(2) + "%"]
+    ];
+
+    values.forEach(function (item) {
+      const li = document.createElement("li");
+      li.textContent = item[0] + ": " + item[1];
+      list.appendChild(li);
+    });
+
+    result.appendChild(heading);
+    result.appendChild(list);
+  }
+
+  button.addEventListener("click", calculate);
+
+  [costInput, markupInput, currencyInput].forEach(function (input) {
+    input.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        calculate();
+      }
+    });
+  });
+
+  calculate();
+})();
+</script>
+</body>
+</html>
+```
